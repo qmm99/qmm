@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.st.dao.IRoleDao">
+	<select id="allrole" parameterType="map" resultType="map">
+		select * from role where role_id like '%${check}%' or role_name like '%${check}%'
+	</select>
+	<insert id="addrole" parameterType="map">
+		insert into role values (#{role_id},#{role_name})
+	</insert>
+	<delete id="delrole"  parameterType="map">
+		delete from role where role_id=#{role_id}
+	</delete>
+	<update id="uprole" parameterType="map">
+		update  role set role_name=#{role_name} where role_id=#{role_id}
+	</update>
+	<select id="role_treeJson" resultMap="role_treeJson">
+		select a.perm_id as parent_id,a.perm_name as parent_name,b.perm_id,b.perm_name  
+		from permission a left join permission b
+		on a.perm_id=b.parent_id where a.parent_id is null
+	</select>
+	<resultMap type="com.st.bean.roleTreeBean" id="role_treeJson">
+		<result column="parent_id" property="id"/> <!-- 父节点 -->
+		<result column="parent_name" property="title"/>
+		<collection property="children" ofType="com.st.bean.roleTreeBean">
+			<result column="perm_id" property="id"/> <!-- 子节点 -->
+			<result column="perm_name" property="title"/>
+		</collection>
+	</resultMap>
+	<insert id="addrole_perm" parameterType="map">
+		insert into role_permission values
+		 <foreach collection="perms" separator="," item="item" index="index" >
+            (#{role_id},#{item})
+        </foreach>
+	</insert>
+	<!-- <insert id="addrole_perm" parameterType="map">
+		insert into role_permission values (#{role_id},#{perm_id})
+	</insert> -->
+	<select id="id_params" parameterType="map" resultType="map">
+		select * from role_permission where role_id=#{role_id} and perm_id=#{perm_id}
+	</select>
+	<select id="roleid_perm" parameterType="map" resultType="map">
+		select * from role_permission where role_id=#{role_id}
+	</select>
+	<select id="getUser"  parameterType="String" resultType="com.st.bean.UserBean">
+		select * from user where user_name=#{username}
+	</select>
+	<select id="getPermByUsername" resultType="com.st.bean.PermBean">
+		select e.* from user as a 
+left join user_role as b on a.user_id=b.user_id 
+left join role as c  on b.role_id=c.role_id
+left join  role_permission as d on c.role_id=d.role_id
+left join permission as e on d.perm_id=e.perm_id
+where d.perm_id is not null and a.user_name=#{username}
+	</select>
+</mapper>

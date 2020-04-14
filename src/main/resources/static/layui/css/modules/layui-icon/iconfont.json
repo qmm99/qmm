@@ -1,0 +1,23 @@
+{
+  "id": "1650137",
+  "name": "layui-icon",
+  "font_family": "iconfont",
+  "css_prefix_text": "layui-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "663276",
+      "name": "解封",
+      "font_class": "jiefeng",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "3067248",
+      "name": "封号",
+      "font_class": "fenghao",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    }
+  ]
+}

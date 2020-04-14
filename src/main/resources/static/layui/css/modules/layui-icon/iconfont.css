@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1582278522188'); /* IE9 */
+  src: url('iconfont.eot?t=1582278522188#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQEAAsAAAAACAAAAAO3AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDZIMxATYCJAMMCwgABCAFhG0HOxv8BlGUzU2Y7CMx3dohY4hwzmIzmGI7Ed/j4b+xb/fNzKo2aSrdTxfTVDbtRgNK4XRCJZPFMvnP9541U+ala8zyC3C6B6VcYZKmSn2AVHwd+Qn7PJfTu4b4/JblMsfyo16AcUAB7Y1tsgIJyANqGLugJZ4mUK9XBrhMDVQCQmFOCsQDx3YDImNRGupDrVBdsbKIZ2K16THdAcBT8Pn4B/KCIKnKzLNWrhr7QM1P/5+hwgmVCdryRBOmc4GtI2MUUIijSs8OYZQZJVSvakTN5dWKkKaK/68QSDRd9UZ/eImoZtY2gkGYTfz0d/gEP0OzEq7fRzXMfQTAV2zoHHqnMrkVVulHEKP39VfP2hUTezp/uy/d51VD0u1WLfGkHSyNXrGDVKaI8KBqIpTZPWcXr4I+X/eyWWFKtbvTjgnhqqXhS7dHapZPtC+DMHJ5bKR11+27I1evioCrExK83gLSfS1iQvSOCyBuTTRYsiJ66d60g5UgzK0s2XImKm5Fprf/Li/0adxupcej8oX39HqVm33yo6XKfaprZZq9SRvc+ReDX2dMLIJECrzPfpN0+suo8lXzpKA4wuDOJPVX0vlN8wymEHBi0Ri/0OnXdYUH1R8lJMbOCiMhP28F2n876bSF79eP/JsZ6Ex7G2O99fzUrFmnk0BeY57Ul68XDR/M1P4hc089EvbVkDV3c0sP+VPwkj1y8UJZdr2kLz86NXbIBWqpM/0nndeccnGXZmYDs8jy5Rmis0HD91GDIWeAw+BQzjgYDoE6IxwKh+kMT88EDKUvPii5fmfyvD7UcfOeR9S8SoMuAJXJ+U+eCHOP8uec+ke/49N3HNwZWPGfkBXwzXljFAxXJhfQ3ab2fr3B/5N2bCqa3LTmokgcieHNdlMhCSjiWn+tEdo9Ha7r6lxLqNWVIKnRE81qbdtFgcxRVGkwi2q15lBvhHx9gw42QlHqMGwqQGi1H0mzL8ha3SUL8wmqdPuCaq0hRL2tCN2xQX9wZL0NdztwH+oZibhe3szYdgcZ1tOYdRq7bWl5wFJjm52Lo9ysnHxejs3YNsUcu4vNczgYxNh4E6LAedho5JHFxutxryNL53BYyrKzmaoXZfXyJkBaYoN1c8D6ID1GQji9eGaM196BLLyfhrGcjLrZGihVQTXMxo7rHsmVJacDKdeYO1Fu5RI7F1YeBwcGwrDhmSAUcGFGK8NDLNXD9LBeDll0A1IWZbJRK6arJmt5nen9dkA9c3GOFDmKmjsOM9jMSt20rpsHAAA=') format('woff2'),
+  url('iconfont.woff?t=1582278522188') format('woff'),
+  url('iconfont.ttf?t=1582278522188') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1582278522188#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.layui-icon-jiefeng:before {
+  content: "\e60d";
+}
+
+.layui-icon-fenghao:before {
+  content: "\e613";
+}
+
